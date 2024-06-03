@@ -275,7 +275,7 @@ nav .mobile-links {
   z-index: 10;
   position: absolute;
   top: 13px;
-  left: -68px;
+  left: 0px;
   display: none;
 }
 
@@ -691,6 +691,7 @@ margin-bottom: 5px;
   .mobile-links li a {
     text-decoration: none;
     color: white;
+ 
   }
 
   nav .mobile-button {
@@ -827,7 +828,7 @@ h2 {
   }
 
   .home .content-images {
-    display: block;
+    display: none;
   }
 
   .mobile-links li a {
