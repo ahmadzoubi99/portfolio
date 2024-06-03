@@ -216,6 +216,7 @@ p {
   height: 100vh;
   background-color: #171a1c;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -364,7 +365,7 @@ nav .mobile-links li {
 }
 
 .about .content-images img {
-  width: 110%;
+  width: 100%;
   border-radius: 15px;
   padding-right: 10px;
 }
@@ -827,8 +828,11 @@ h2 {
     font-size: 13px;
   }
 
+  /* .content{
+    flex-wrap: wrap;
+  } */
   .home .content-images {
-    display: none;
+    display:block ;
   }
 
   .mobile-links li a {
