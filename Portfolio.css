@@ -10,31 +10,11 @@
 ul {
   list-style: none;
 }
-footer #wholeFooter {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--bgColor-1);
-  flex-wrap: wrap;
-}
-.newFooter {
-  width: 30%;
-  text-decoration: none;
-}
-
-footer #footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
 a {
   color: var(--lightColor);
 }
 
-footer #wholeFooter ul li a {
-  text-decoration: none;
-}
 
 * {
   margin: 0;
@@ -50,7 +30,7 @@ html {
 }
 
 h1 {
-  font-size: 4.65rem;
+  font-size: 2.65rem;
   margin: 1.7rem 0;
 }
 
@@ -67,7 +47,7 @@ h3 {
 h4 {
   font-size: 1.25rem;
   letter-spacing: 0.12rem;
-  color: var(--secondaryColor);
+  color:white;
 }
 
 h5 {
@@ -82,14 +62,14 @@ span {
 }
 
 p {
-  color: var(--secondaryColor);
+  color: white;
   letter-spacing: 1px;
   line-height: 1.8rem;
   font-size: 1rem;
 }
 /* about section */
 
-.row {
+/* .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -99,24 +79,13 @@ p {
   padding-top: 4%;
   padding-bottom: 4%;
 
-}
-.about-col-1 {
-  flex-basis: 35%;
-  border-radius: 15px;
-}
-.about-col-1 img {
-  width: 100%;
-  border-radius: 15px;
-}
+} */
+
+
 .about-col-2 {
   flex-basis: 88%;
 }
 
-.row1{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
 .sub-title {
   font-size: 60px;
@@ -194,7 +163,6 @@ p {
 
 
 .about1{
-
   background-color: #171a1c;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -202,10 +170,66 @@ p {
 }
 
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-left: 35px;
+}
 
+.project-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
+.project-card:hover {
+  transform: translateY(-5px);
+}
 
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+.project-info {
+  padding: 15px;
+  color: #fff;
+}
+
+.project-info h2 {
+  color: #ff004f;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.read-more-btn {
+  background-color: #ff004f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e60044;
+}
+.project-card img{
+width: 350px;
+}
 
 /*------------------------------------------------------------------------------
 *------------------------- Home SECTION-----------------------------------------
@@ -225,7 +249,7 @@ p {
 }
 
 nav {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   padding-left: var(--padding);
   padding-right: var(--padding);
   display: flex;
@@ -237,8 +261,8 @@ nav {
 nav #main-links li {
   list-style-type: none;
   display: inline-block;
-  margin: 0.8rem 1.5rem;
-  font-size: 17px;
+  margin: 0.8rem 1rem;
+  font-size: 23px;
 }
 
 nav #main-links li a {
@@ -325,8 +349,9 @@ nav .mobile-links li {
 
 .home .content-images {
   width: 40%;
-  height: 100%;
+  height: 80%;
   position: relative;
+  bottom: 15%;
   align-self: flex-end;
 }
 
@@ -347,6 +372,9 @@ nav .mobile-links li {
   left: 45%;
 } */
 
+
+
+
 /*-------------------------------------------------------------------------------
 *------------------------- ABOUT SECTION-----------------------------------------
 -------------------------------------------------------------------------------*/
@@ -358,9 +386,11 @@ nav .mobile-links li {
   align-items: center;
   justify-content: space-between;
 }
-
+.about h1{
+  font-size: 50px;
+}
 .about .content-images {
-  width: 35%;
+  width: 70%;
   padding-right: 10px;
 }
 
@@ -372,68 +402,6 @@ nav .mobile-links li {
 
 .about .content-text {
   width: 35%;
-}
-
-/*-------------------------------------------------------------------------------
-*------------------------- EDUCATION SECTION-----------------------------------------
--------------------------------------------------------------------------------*/
-
-.education {
-  background-color: var(--bgColor-1);
-  padding: 2rem var(--padding);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.box {
-  display: flex;
-  justify-content: space-around;
-}
-
-.card {
-  width: 300px;
-  background-color: var(--bgColor-2);
-  border-radius: 20px;
-  padding: 1.3rem 2rem;
-  text-align: center;
-}
-
-.card i {
-  font-size: 3.12rem;
-  text-align: center;
-  color: var(--primaryColor);
-  margin: 2rem;
-}
-
-/*-------------------------------------------------------------------------------
-*------------------------- LANGUAGES SECTION-----------------------------------------
--------------------------------------------------------------------------------*/
-
-.languages {
-  background-color: var(--bgColor-2);
-  padding: 2rem var(--padding);
-}
-
-.box-lang {
-  display: flex;
-  justify-content: space-around;
-}
-
-.card-lang {
-  width: 300px;
-  background-color: var(--bgColor-1);
-  border-radius: 20px;
-  padding: 1.3rem 2rem;
-  text-align: center;
-}
-
-.card-lang i {
-  font-size: 3.12rem;
-  text-align: center;
-  color: var(--primaryColor);
-  margin: 2rem;
 }
 
 /*-------------------------------------------------------------------------------
@@ -520,18 +488,146 @@ nav .mobile-links li {
 /*-------------------------------------------------------------------------------
 *------------------------- FOOTER SECTION-----------------------------------------
 -------------------------------------------------------------------------------*/
-
 footer {
-  padding: 2rem var(--padding);
-  background-color: var(--bgColor-1);
+  background-color: var(--bgColor-2);
 }
 
-footer .content-footer {
+.newFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+  padding: 4%;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.right-side {
+  flex: 1;
+  text-align: left;
+  /* Add any additional styling for the right side content */
+}
+
+.logo-center {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-center img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px; /* Adjust the size of the logo */
+}
+
+.logo-center h2 {
+  color: #fff; /* Change to your desired color */
+  margin: 10px 0;
+}
+
+.logo-center p {
+  color: #fff; /* Change to your desired color */
+}
+
+#footer-home-links {
+  flex: 1;
+  text-align: right;
+}
+
+#footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  justify-content: center;
+  gap: 20px;
 }
+
+#footer-links li {
+  margin: 0;
+}
+
+#footer-links a {
+  text-decoration: none;
+  color: #fff; /* Change to your desired color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .newFooter {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #footer-home-links, .right-side {
+      text-align: center;
+  }
+}
+
+
+
+/* footer {
+  background-color: var(--bgColor-2);
+}
+
+.newFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+  padding: var(--padding);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#footer-home-links {
+  flex: 1;
+  text-align: left;
+}
+
+#footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#footer-links li {
+  margin: 0;
+}
+
+#footer-links a {
+  text-decoration: none;
+  color: #fff; /* Change to your desired color */
+}
+
+.logo-center {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-center img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px; /* Adjust the size of the logo */
+}
+
+.logo-center h2 {
+  color: #fff; /* Change to your desired color */
+  margin: 10px 0;
+}
+
+.logo-center p {
+  color: #fff; /* Change to your desired color */
+}
+
+.right-side {
+  flex: 1;
+  text-align: right;
+  /* Add any additional styling for the right side content */
+}
+ */
 
 #menu {
   display: none;
@@ -541,6 +637,7 @@ footer .content-footer {
   outline: none;
   background: none;
   cursor: pointer;
+  
   /* user-select: none; */
 }
 
@@ -643,6 +740,7 @@ margin-bottom: 5px;
   }
 
   .newFooter {
+    
     width: 90%;
   }
   h3 {
